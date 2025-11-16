@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Dashboard - Data Produk</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-page"> <div class="sidebar">
+        <a href="dashboard.html"><i class="fas fa-home"></i></a>
+        <a href="products.html" class="active"><i class="fas fa-th-large"></i></a>
+        <a href="#"><i class="fas fa-dollar-sign"></i></a>
+        <a href="#"><i class="fas fa-chart-bar"></i></a>
+        <a href="#"><i class="fas fa-cog"></i></a>
+    </div>
+
+    <div class="main-content">
+        
+        <h1>List Data Product</h1>
+
+        <div class="product-table-card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>Stock</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="product-list-body">
+                    </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,429 @@
+/* --- CSS Reset & Basic Setup --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 1. Aturan 'body' GLOBAL (berlaku di semua halaman) */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Aturan spesifik untuk layout halaman login */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- Kontainer Login Utama --- */
+.login-card {
+    display: flex;
+    width: 900px;
+    max-width: 90%;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+/* --- 1. Panel Ilustrasi (Kiri) --- */
+.illustration-panel {
+    flex: 1.1; 
+    background-color: #f6f9ff;
+    /* GANTI URL INI dengan link gambar Anda dari ImgBB */
+    background-image: url('/css/desain.png'); 
+    background-size: 140%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 40px;
+}
+
+/* --- 2. Panel Form (Kanan) --- */
+.form-panel {
+    flex: 1;
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-panel h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+/* --- Input Fields --- */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 16px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 14px 14px 45px; 
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #007bff;
+}
+
+/* --- Pesan Error (Sesuai Spesifikasi) --- */
+#error-message {
+    color: #d93025; 
+    font-size: 13px;
+    margin-bottom: 15px;
+    text-align: left;
+    display: none; /* Sembunyi secara default */
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-options a {
+    font-size: 13px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* --- Tombol Login (Sesuai Spesifikasi) --- */
+.btn-login {
+    width: 100%;
+    padding: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #0056b3;
+}
+
+/* --- Elemen Desain Tambahan (Separator, dll) --- */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #aaa;
+    margin: 25px 0;
+    font-size: 13px;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+.social-login {
+    display: flex;
+    gap: 15px;
+}
+
+.social-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.social-btn:hover {
+    background-color: #f9f9f9;
+}
+.social-btn img {
+    width: 20px;
+    margin-right: 10px;
+}
+/* Mengatur style untuk ikon Font Awesome di dalam tombol */
+.social-btn i {
+    font-size: 18px; /* Ukuran ikon */
+    width: 20px;       /* Beri lebar agar teks 'Google' & 'Facebook' lurus */
+    margin-right: 10px;
+    text-align: center;
+}
+
+/* Beri warna khusus untuk ikon Google & Facebook */
+.social-btn .fa-google {
+    color: #DB4437;
+}
+.social-btn .fa-facebook {
+    color: #4267B2;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+    color: #555;
+}
+
+.signup-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* --- Media Query untuk Responsif --- */
+@media (max-width: 800px) {
+    .illustration-panel {
+        display: none;
+    }
+
+    .login-card {
+        width: 90%;
+        max-width: 450px;
+        margin: 20px;
+    }
+
+    .form-panel {
+        padding: 30px;
+    }
+}
+
+/* --- Dashboard Styles --- */
+
+.dashboard-page {
+    display: flex; /* Kunci untuk layout sidebar */
+    min-height: 100vh;
+}
+
+/* --- 1. Sidebar Menu --- */
+.sidebar {
+    width: 90px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    flex-shrink: 0; /* Mencegah sidebar menyusut */
+}
+
+.sidebar a {
+    font-size: 24px;
+    color: #9ca3af; /* Abu-abu */
+    padding: 18px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: #f0f2f5; /* Latar abu-abu saat di-hover */
+    color: #007bff; /* Biru */
+}
+
+.sidebar a.active {
+    color: #007bff; /* Ikon yang aktif berwarna biru */
+}
+
+/* --- 2. Main Content --- */
+.main-content {
+    flex: 1; /* Mengisi sisa ruang */
+    padding: 40px;
+    overflow-y: auto; /* Agar bisa scroll jika konten panjang */
+}
+
+.main-content h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* --- 3. Card Container (Spesifikasi: Grid) --- */
+.card-container {
+    display: grid;
+    /* Membuat 3 kolom jika muat, jika tidak, jadi 1 kolom */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px; /* Jarak antar kartu */
+    margin-bottom: 30px;
+}
+
+.summary-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Lingkaran */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.card-icon i {
+    font-size: 20px;
+}
+
+.card-title {
+    font-size: 15px;
+    color: #6b7280; /* Abu-abu gelap */
+    margin-bottom: 5px;
+}
+
+.card-value {
+    font-size: 28px;
+    font-weight: 600;
+    color: #111827; /* Hitam */
+}
+
+/* --- 4. Tombol "Lihat Data Produk" --- */
+.btn-products {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-products:hover {
+    background-color: #0056b3;
+}
+
+/* --- Product Page Styles (Tambahkan di akhir file) --- */
+
+.product-table-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    /* Menangani tabel di layar kecil */
+    overflow-x: auto; 
+}
+
+.product-table-card table {
+    width: 100%;
+    border-collapse: collapse; /* Menghilangkan spasi antar border */
+    min-width: 500px; /* Lebar minimum sebelum scroll */
+}
+
+.product-table-card th,
+.product-table-card td {
+    padding: 14px 10px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0; /* Garis pemisah abu-abu */
+    vertical-align: middle;
+}
+
+.product-table-card th {
+    font-weight: 600;
+    color: #333;
+    font-size: 15px;
+}
+
+.product-table-card td {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Menghilangkan border di baris terakhir */
+.product-table-card tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Tombol Aksi */
+.action-btn {
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+}
+
+.btn-edit {
+    color: #007bff; /* Biru */
+}
+.btn-edit:hover {
+    color: #0056b3;
+}
+
+.btn-delete {
+    color: #d93025; /* Merah */
+}
+.btn-delete:hover {
+    color: #a1231a;
+}
+
+/* --- Bonus Animasi & Kreativitas --- */
+
+/* Efek hover "melayang" untuk summary card */
+.summary-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.summary-card:hover {
+    transform: translateY(-5px); /* Mengangkat kartu */
+    box-shadow: 0 12px 20px rgba(0,0,0,0.08); /* Bayangan lebih jelas */
+}
+
+/* Animasi "Fade In" untuk konten saat dimuat */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Terapkan ke elemen utama di setiap halaman */
+.login-card, .main-content {
+    animation: fadeIn 0.5s ease-out;
+}
