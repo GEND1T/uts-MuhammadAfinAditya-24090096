@@ -37,7 +37,7 @@ body {
     flex: 1.1; 
     background-color: #f6f9ff;
     /* GANTI URL INI dengan link gambar Anda dari ImgBB */
-    background-image: url('/css/desain.png'); 
+    background-image: url('/desain.png'); 
     background-size: 140%;
     background-repeat: no-repeat;
     background-position: center;
