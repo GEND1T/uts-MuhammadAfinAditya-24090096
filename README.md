@@ -15,10 +15,10 @@ Proyek ini adalah submission untuk Ujian Tengah Semester mata kuliah Pemrograman
 ### 2. Link Penting
 
 * **Link GitHub Repository:**
-    `https://github.com/[UsernameGitHubAnda]/[NamaRepoAnda]`
+    `[https://github.com/[UsernameGitHubAnda]/[NamaRepoAnda]](https://github.com/GEND1T/uts-MuhammadAfinAditya-24090096)`
 
 * **Link GitHub Pages (Aplikasi Online):**
-    `https://[UsernameGitHubAnda].github.io/[NamaRepoAnda]/`
+    `[https://[UsernameGitHubAnda].github.io/[NamaRepoAnda]/](https://gend1t.github.io/uts-MuhammadAfinAditya-24090096/)`
 
 ---
 
