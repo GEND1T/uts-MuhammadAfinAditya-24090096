@@ -281,6 +281,9 @@ body {
 }
 
 /* --- 3. Card Container --- */
+
+
+
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -403,7 +406,6 @@ body {
 .btn-delete:hover {
     color: #a1231a;
 }
-
 .summary-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
