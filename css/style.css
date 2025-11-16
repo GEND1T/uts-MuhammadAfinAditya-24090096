@@ -183,15 +183,15 @@ body {
     width: 20px;
     margin-right: 10px;
 }
-/* Mengatur style untuk ikon Font Awesome di dalam tombol */
+
 .social-btn i {
-    font-size: 18px; /* Ukuran ikon */
-    width: 20px;       /* Beri lebar agar teks 'Google' & 'Facebook' lurus */
+    font-size: 18px;
+    width: 20px;       
     margin-right: 10px;
     text-align: center;
 }
 
-/* Beri warna khusus untuk ikon Google & Facebook */
+
 .social-btn .fa-google {
     color: #DB4437;
 }
@@ -212,7 +212,7 @@ body {
     font-weight: 500;
 }
 
-/* --- Media Query untuk Responsif --- */
+
 @media (max-width: 800px) {
     .illustration-panel {
         display: none;
@@ -232,7 +232,7 @@ body {
 /* --- Dashboard Styles --- */
 
 .dashboard-page {
-    display: flex; /* Kunci untuk layout sidebar */
+    display: flex;
     min-height: 100vh;
 }
 
@@ -245,12 +245,12 @@ body {
     align-items: center;
     padding-top: 30px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    flex-shrink: 0; /* Mencegah sidebar menyusut */
+    flex-shrink: 0; 
 }
 
 .sidebar a {
     font-size: 24px;
-    color: #9ca3af; /* Abu-abu */
+    color: #9ca3af; 
     padding: 18px;
     margin-bottom: 10px;
     border-radius: 12px;
@@ -258,19 +258,19 @@ body {
 }
 
 .sidebar a:hover {
-    background-color: #f0f2f5; /* Latar abu-abu saat di-hover */
-    color: #007bff; /* Biru */
+    background-color: #f0f2f5;
+    color: #007bff;
 }
 
 .sidebar a.active {
-    color: #007bff; /* Ikon yang aktif berwarna biru */
+    color: #007bff; 
 }
 
 /* --- 2. Main Content --- */
 .main-content {
-    flex: 1; /* Mengisi sisa ruang */
+    flex: 1; 
     padding: 40px;
-    overflow-y: auto; /* Agar bisa scroll jika konten panjang */
+    overflow-y: auto;
 }
 
 .main-content h1 {
@@ -280,10 +280,9 @@ body {
     margin-bottom: 30px;
 }
 
-/* --- 3. Card Container (Spesifikasi: Grid) --- */
+/* --- 3. Card Container --- */
 .card-container {
     display: grid;
-    /* Membuat 3 kolom jika muat, jika tidak, jadi 1 kolom */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px; /* Jarak antar kartu */
     margin-bottom: 30px;
@@ -301,7 +300,7 @@ body {
 .card-icon {
     width: 50px;
     height: 50px;
-    border-radius: 50%; /* Lingkaran */
+    border-radius: 50%; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -314,14 +313,14 @@ body {
 
 .card-title {
     font-size: 15px;
-    color: #6b7280; /* Abu-abu gelap */
+    color: #6b7280; 
     margin-bottom: 5px;
 }
 
 .card-value {
     font-size: 28px;
     font-weight: 600;
-    color: #111827; /* Hitam */
+    color: #111827; 
 }
 
 /* --- 4. Tombol "Lihat Data Produk" --- */
@@ -342,7 +341,7 @@ body {
     background-color: #0056b3;
 }
 
-/* --- Product Page Styles (Tambahkan di akhir file) --- */
+
 
 .product-table-card {
     background-color: #ffffff;
@@ -355,15 +354,15 @@ body {
 
 .product-table-card table {
     width: 100%;
-    border-collapse: collapse; /* Menghilangkan spasi antar border */
-    min-width: 500px; /* Lebar minimum sebelum scroll */
+    border-collapse: collapse; 
+    min-width: 500px; 
 }
 
 .product-table-card th,
 .product-table-card td {
     padding: 14px 10px;
     text-align: left;
-    border-bottom: 1px solid #f0f0f0; /* Garis pemisah abu-abu */
+    border-bottom: 1px solid #f0f0f0; 
     vertical-align: middle;
 }
 
@@ -378,12 +377,12 @@ body {
     color: #555;
 }
 
-/* Menghilangkan border di baris terakhir */
+
 .product-table-card tbody tr:last-child td {
     border-bottom: none;
 }
 
-/* Tombol Aksi */
+
 .action-btn {
     font-size: 16px;
     cursor: pointer;
@@ -392,58 +391,54 @@ body {
 }
 
 .btn-edit {
-    color: #007bff; /* Biru */
+    color: #007bff; 
 }
 .btn-edit:hover {
     color: #0056b3;
 }
 
 .btn-delete {
-    color: #d93025; /* Merah */
+    color: #d93025; 
 }
 .btn-delete:hover {
     color: #a1231a;
 }
 
-/* --- Bonus Animasi & Kreativitas --- */
-
-/* Efek hover "melayang" untuk summary card */
 .summary-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .summary-card:hover {
-    transform: translateY(-5px); /* Mengangkat kartu */
-    box-shadow: 0 12px 20px rgba(0,0,0,0.08); /* Bayangan lebih jelas */
-}
+    transform: translateY(-5px); 
+    box-shadow: 0 12px 20px rgba(0,0,0,0.08); 
 
-/* Animasi "Fade In" untuk konten saat dimuat */
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Terapkan ke elemen utama di setiap halaman */
+
 .login-card, .main-content {
     animation: fadeIn 0.5s ease-out;
 }
 
-/* --- Media Query untuk Responsif Dashboard/Products --- */
+
 @media (max-width: 768px) {
-    /* Gunakan layout kolom, bukan flex baris */
+
     .dashboard-page {
         flex-direction: column;
     }
 
-    /* Ubah sidebar menjadi top-bar (navbar) */
+
     .sidebar {
         width: 100%;
         height: 70px;
         padding: 0 20px;
-        flex-direction: row; /* Ikon jadi horizontal */
-        justify-content: space-around; /* Beri jarak */
+        flex-direction: row;
+        justify-content: space-around;
         box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        order: 2; /* Pindah ke bawah (opsional) */
+        order: 2; 
     }
 
     .sidebar a {
@@ -453,11 +448,12 @@ body {
 
     .main-content {
         padding: 20px;
-        order: 1; /* Konten utama di atas */
+        order: 1; 
     }
 
     .main-content h1 {
-        font-size: 26px; /* Kecilkan font di mobile */
+        font-size: 26px; 
         margin-bottom: 20px;
     }
+}
 }
