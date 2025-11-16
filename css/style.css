@@ -37,7 +37,7 @@ body {
     flex: 1.1; 
     background-color: #f6f9ff;
     /* GANTI URL INI dengan link gambar Anda dari ImgBB */
-    background-image: url('/css/desain.png'); 
+    background-image: url('https://i.ibb.co.com/zH4hxP6f/1763261865454.png'); 
     background-size: 140%;
     background-repeat: no-repeat;
     background-position: center;
@@ -426,4 +426,38 @@ body {
 /* Terapkan ke elemen utama di setiap halaman */
 .login-card, .main-content {
     animation: fadeIn 0.5s ease-out;
+}
+
+/* --- Media Query untuk Responsif Dashboard/Products --- */
+@media (max-width: 768px) {
+    /* Gunakan layout kolom, bukan flex baris */
+    .dashboard-page {
+        flex-direction: column;
+    }
+
+    /* Ubah sidebar menjadi top-bar (navbar) */
+    .sidebar {
+        width: 100%;
+        height: 70px;
+        padding: 0 20px;
+        flex-direction: row; /* Ikon jadi horizontal */
+        justify-content: space-around; /* Beri jarak */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        order: 2; /* Pindah ke bawah (opsional) */
+    }
+
+    .sidebar a {
+        margin-bottom: 0;
+        padding: 15px;
+    }
+
+    .main-content {
+        padding: 20px;
+        order: 1; /* Konten utama di atas */
+    }
+
+    .main-content h1 {
+        font-size: 26px; /* Kecilkan font di mobile */
+        margin-bottom: 20px;
+    }
 }
