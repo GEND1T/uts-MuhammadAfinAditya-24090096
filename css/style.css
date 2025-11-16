@@ -460,7 +460,7 @@ body {
 #toast-notification {
     position: fixed;  
     top: 20px;       
-    right: 580px;    
+    right: 40px;    
     background-color: #ffffff;
     color: #333;
     padding: 16px 20px;
@@ -481,11 +481,11 @@ body {
 }
 
 
-.toast-hidden {
+/* .toast-hidden {
     opacity: 0;
     transform: translateY(-20px);
     visibility: hidden;
-}
+} */
 
 
 .toast-visible {
