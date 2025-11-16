@@ -23,8 +23,23 @@ document.addEventListener("DOMContentLoaded", function() {
                 errorMessage.style.display = "block";
             } else {
                 errorMessage.style.display = "none";
-                // alert("Login berhasil");
-                window.location.href = "dashboard.html"; 
+                
+                // 1. Ambil elemen toast
+                const toast = document.getElementById('toast-notification');
+                
+                // 2. Tampilkan toast
+                toast.classList.add('toast-visible');
+                toast.classList.remove('toast-hidden');
+
+                // 3. Tunggu 2 detik, lalu redirect
+                setTimeout(function() {
+                    // Sembunyikan toast lagi (opsional, tapi rapi)
+                    toast.classList.remove('toast-visible');
+                    toast.classList.add('toast-hidden');
+                    
+                    // Arahkan ke dashboard.html
+                    window.location.href = "dashboard.html";
+                }, 2000); // 2000ms = 2 detik
             }
         });
     }
@@ -65,9 +80,9 @@ document.addEventListener("DOMContentLoaded", function() {
         
         
         const products = [
-            { id: 1, name: "Kopi Gayo", price: 25000, stock: 50 },
-            { id: 2, name: "Teh Hitam", price: 18000, stock: 30 },
-            { id: 3, name: "Coklat Aceh", price: 30000, stock: 20 }
+            { id: 1,  name: "Teh Hijau", price: 100000, stock: 50 },
+            { id: 2, name: "Coklat Dubai", price: 200000, stock: 30 },
+            { id: 3, name: "Kopi Aren", price: 75000, stock: 20}
         ];
 
         

@@ -231,6 +231,8 @@ body {
 
 /* --- Dashboard Styles --- */
 
+
+
 .dashboard-page {
     display: flex;
     min-height: 100vh;
@@ -267,6 +269,12 @@ body {
 }
 
 /* --- 2. Main Content --- */
+.main-content header {
+    font-size: 32px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+}
 .main-content {
     flex: 1; 
     padding: 40px;
@@ -458,4 +466,42 @@ body {
         margin-bottom: 20px;
     }
 }
+}
+/* --- [BARU] Style Toast Notification --- */
+
+#toast-notification {
+    position: fixed; /* KUNCI UTAMA: Membuatnya melayang */
+    top: 20px;       /* Jarak 20px dari atas */
+    right: 620px;      /* Jarak 20px dari kanan */
+    background-color: #ffffff;
+    color: #333;
+    padding: 16px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    z-index: 1000; /* Tampil di atas segalanya */
+    
+    /* Animasi transisi */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#toast-notification i {
+    color: #22c55e; /* Warna hijau sukses */
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+/* Status Tersembunyi */
+.toast-hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+    visibility: hidden;
+}
+
+/* Status Terlihat */
+.toast-visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
 }
