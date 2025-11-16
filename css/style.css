@@ -481,11 +481,11 @@ body {
 }
 
 
-/* .toast-hidden {
+.toast-hidden {
     opacity: 0;
     transform: translateY(-20px);
     visibility: hidden;
-} */
+}
 
 
 .toast-visible {
