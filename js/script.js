@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (totalProductsElement) {
         
         const summary = {
-            totalProducts: 150,
+            totalProducts: 3,
             totalSales: 95,
             totalRevenue: 15200000
         };
