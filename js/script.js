@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
     
-    // --- BAGIAN LOGIN ---
     const CORRECT_EMAIL = "GEND1T";
     const CORRECT_PASSWORD = "24090096";
     
@@ -24,35 +23,32 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 errorMessage.style.display = "none";
                 
-                // 1. Ambil elemen toast
+               
                 const toast = document.getElementById('toast-notification');
                 
-                // 2. Tampilkan toast
+                
                 toast.classList.add('toast-visible');
                 toast.classList.remove('toast-hidden');
 
-                // 3. Tunggu 2 detik, lalu redirect
+                
                 setTimeout(function() {
-                    // Sembunyikan toast lagi (opsional, tapi rapi)
                     toast.classList.remove('toast-visible');
                     toast.classList.add('toast-hidden');
                     
-                    // Arahkan ke dashboard.html
                     window.location.href = "dashboard.html";
-                }, 2000); // 2000ms = 2 detik
+                }, 2000); 
             }
         });
     }
 
-    // --- BAGIAN DASHBOARD ---
     const totalProductsElement = document.getElementById('total-products');
 
     if (totalProductsElement) {
-        // Data dummy
+        
         const summary = {
-            totalProducts: 120,
-            totalSales: 85,
-            totalRevenue: 12500000
+            totalProducts: 150,
+            totalSales: 95,
+            totalRevenue: 15200000
         };
 
         
@@ -71,7 +67,6 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById('total-revenue').textContent = formattedRevenue.replace('IDR', 'Rp');
     }
 
-    // --- PRODUCTS PAGE  ---
     
   
     const productListBody = document.getElementById('product-list-body');

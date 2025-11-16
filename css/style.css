@@ -1,11 +1,11 @@
-/* --- CSS Reset & Basic Setup --- */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* 1. Aturan 'body' GLOBAL (berlaku di semua halaman) */
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f0f2f5;
@@ -13,7 +13,7 @@ body {
     padding: 0;
 }
 
-/* 2. Aturan spesifik untuk layout halaman login */
+
 .login-page {
     display: flex;
     justify-content: center;
@@ -21,7 +21,7 @@ body {
     min-height: 100vh;
 }
 
-/* --- Kontainer Login Utama --- */
+
 .login-card {
     display: flex;
     width: 900px;
@@ -32,11 +32,10 @@ body {
     overflow: hidden;
 }
 
-/* --- 1. Panel Ilustrasi (Kiri) --- */
+
 .illustration-panel {
     flex: 1.1; 
     background-color: #f6f9ff;
-    /* GANTI URL INI dengan link gambar Anda dari ImgBB */
     background-image: url('https://github.com/GEND1T/stokgambar/blob/main/desain.png?raw=true'); 
     background-size: 140%;
     background-repeat: no-repeat;
@@ -44,7 +43,6 @@ body {
     padding: 40px;
 }
 
-/* --- 2. Panel Form (Kanan) --- */
 .form-panel {
     flex: 1;
     padding: 40px 50px;
@@ -61,7 +59,6 @@ body {
     text-align: left;
 }
 
-/* --- Input Fields --- */
 .input-group {
     position: relative;
     margin-bottom: 20px;
@@ -91,13 +88,13 @@ body {
     border-color: #007bff;
 }
 
-/* --- Pesan Error (Sesuai Spesifikasi) --- */
+
 #error-message {
     color: #d93025; 
     font-size: 13px;
     margin-bottom: 15px;
     text-align: left;
-    display: none; /* Sembunyi secara default */
+    display: none; 
 }
 
 .form-options {
@@ -113,7 +110,7 @@ body {
     text-decoration: none;
 }
 
-/* --- Tombol Login (Sesuai Spesifikasi) --- */
+
 .btn-login {
     width: 100%;
     padding: 14px;
@@ -131,7 +128,7 @@ body {
     background-color: #0056b3;
 }
 
-/* --- Elemen Desain Tambahan (Separator, dll) --- */
+
 .separator {
     display: flex;
     align-items: center;
@@ -229,16 +226,12 @@ body {
     }
 }
 
-/* --- Dashboard Styles --- */
-
-
 
 .dashboard-page {
     display: flex;
     min-height: 100vh;
 }
 
-/* --- 1. Sidebar Menu --- */
 .sidebar {
     width: 90px;
     background-color: #ffffff;
@@ -268,7 +261,6 @@ body {
     color: #007bff; 
 }
 
-/* --- 2. Main Content --- */
 .main-content header {
     font-size: 32px;
     font-weight: 600;
@@ -287,9 +279,6 @@ body {
     color: #333;
     margin-bottom: 30px;
 }
-
-/* --- 3. Card Container --- */
-
 
 
 .card-container {
@@ -334,7 +323,6 @@ body {
     color: #111827; 
 }
 
-/* --- 4. Tombol "Lihat Data Produk" --- */
 .btn-products {
     display: inline-block;
     background-color: #007bff;
@@ -467,12 +455,12 @@ body {
     }
 }
 }
-/* --- [BARU] Style Toast Notification --- */
+
 
 #toast-notification {
-    position: fixed; /* KUNCI UTAMA: Membuatnya melayang */
-    top: 20px;       /* Jarak 20px dari atas */
-    right: 620px;      /* Jarak 20px dari kanan */
+    position: fixed;  
+    top: 20px;       
+    right: 580px;    
     background-color: #ffffff;
     color: #333;
     padding: 16px 20px;
@@ -480,26 +468,26 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     display: flex;
     align-items: center;
-    z-index: 1000; /* Tampil di atas segalanya */
+    z-index: 1000; 
     
-    /* Animasi transisi */
+   
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 #toast-notification i {
-    color: #22c55e; /* Warna hijau sukses */
+    color: #22c55e;
     font-size: 20px;
     margin-right: 10px;
 }
 
-/* Status Tersembunyi */
+
 .toast-hidden {
     opacity: 0;
     transform: translateY(-20px);
     visibility: hidden;
 }
 
-/* Status Terlihat */
+
 .toast-visible {
     opacity: 1;
     transform: translateY(0);
