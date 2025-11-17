@@ -22,7 +22,17 @@ Proyek ini adalah submission untuk Ujian Tengah Semester mata kuliah Pemrograman
 
 ---
 
-### 3. Deskripsi Singkat Project
+### 3. Validasi User Login
+
+* **Email Address:**
+    `[GEND1T]`
+
+* **Password:**
+    `[24090096]`
+
+---
+
+### 4. Deskripsi Singkat Project
 
 Proyek ini mensimulasikan alur autentikasi dan dashboard admin sederhana dengan fungsionalitas sebagai berikut:
 
